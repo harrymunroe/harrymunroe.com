@@ -44,7 +44,8 @@ enthusiasm
 side thoughts
 gentle emphasis
 Sentence fragments are allowed
-Em dashes are welcome
+Em dashes are permitted but rationed: at most one per paragraph,
+and never as the default way to attach a clause
 Avoid:
 emojis
 excessive exclamation points
@@ -164,6 +165,14 @@ thinking. It is acceptable — desirable — that some readers leave.
 7.5 Danger Writing
 Pieces about real dangers must end with a credible path forward.
 Never doom without a door.
+7.6 Avoid Machine Cadence
+Certain rhetorical patterns now read as AI-generated and undermine the
+site's realness. Minimize:
+the contrast pivot ("That's a claim, not a mood"; "X isn't about A, it's about B")
+em dashes used as a rhythm crutch
+triadic punch lines and mirrored sentence pairs
+Prefer plain declarative sentences. If a line sounds like it's performing
+its own cleverness, rewrite it flat. One earned flourish per page.
 
 9. Final Litmus Test
 Before adding anything to the site, ask:

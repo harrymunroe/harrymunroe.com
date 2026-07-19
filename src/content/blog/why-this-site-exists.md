@@ -1,6 +1,6 @@
 ---
 title: 'Why this site exists'
-description: 'A working table, not a portfolio. What I''m doing here and who it''s for.'
+description: 'What I''m doing here, and who it''s for.'
 pubDate: 2026-07-19
 type: note
 topics: []
