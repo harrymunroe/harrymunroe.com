@@ -1,0 +1,138 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Page from '../../layouts/Page.astro';
+import { topics } from '../../data/topics';
+
+export async function getStaticPaths() {
+	return topics.map((t) => ({ params: { topic: t.slug }, props: { topic: t } }));
+}
+
+const { topic } = Astro.props;
+
+const entries = (await getCollection('blog'))
+	.filter((post) => post.data.topics.includes(topic.slug))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const typeLabels: Record<string, string> = {
+	essay: 'essay',
+	note: 'note',
+	explainer: 'explainer',
+	poem: 'poem',
+	project: 'project',
+	surge: 'surge',
+};
+---
+
+<Page title={topic.label} description={topic.desc}>
+	<p class="desc">{topic.desc}</p>
+
+	<!-- The thinking table: the one place per page allowed to feel looser.
+	     Entries are staggered slightly; this is intentional mess. -->
+	{
+		entries.length > 0 && (
+			<div class="table">
+				{entries.map((post, i) => (
+					<a
+						class={`entry ${post.data.type === 'surge' ? 'isSurge' : ''} ${i % 3 === 1 ? 'shift' : ''}`}
+						href={`/writing/${post.id}/`}
+					>
+						<span class="type">{typeLabels[post.data.type]}</span>
+						<span class="entryTitle">{post.data.title}</span>
+						<span class="meta">
+							<FormattedDate date={post.data.updatedDate ?? post.data.pubDate} />
+							{post.data.status && <span class="status"> · {post.data.status}</span>}
+						</span>
+					</a>
+				))}
+			</div>
+		)
+	}
+
+	<section class="questions">
+		<h2>Questions on the table</h2>
+		<ul>
+			{topic.openQuestions.map((q) => <li>{q}</li>)}
+		</ul>
+		<p class="epistemic">
+			These are live questions, not rhetorical ones. If you have a good answer — or a better
+			question — <a href={`mailto:harry@harrymunroe.com?subject=${topic.label}`}>write me</a>.
+		</p>
+	</section>
+
+	{
+		entries.length === 0 && (
+			<p class="epistemic">
+				This table is still being set. Notes and projects will accumulate here as they're written
+				— subscribe by <a href="/rss.xml">RSS</a> to see them arrive.
+			</p>
+		)
+	}
+
+	<style>
+		.desc {
+			max-width: 62ch;
+			color: var(--ink-muted);
+			font-size: 1.05em;
+		}
+		.table {
+			margin: 2em 0;
+			display: flex;
+			flex-direction: column;
+			gap: 0.9em;
+		}
+		.entry {
+			display: block;
+			max-width: 56ch;
+			padding: 0.7em 1em;
+			border: 1px solid var(--line);
+			border-radius: var(--radius);
+			color: var(--ink);
+			background: var(--paper);
+		}
+		.entry.shift {
+			margin-left: 2.5em;
+		}
+		.entry:hover {
+			text-decoration: none;
+			border-color: var(--accent);
+		}
+		.entry.isSurge {
+			border-top: 2px solid var(--surge);
+		}
+		.entry.isSurge .type {
+			color: var(--surge);
+		}
+		.type {
+			display: inline-block;
+			font-size: 0.75em;
+			color: var(--accent);
+			font-style: italic;
+			margin-right: 0.75em;
+		}
+		.entryTitle {
+			font-weight: 700;
+		}
+		.meta {
+			display: block;
+			font-size: 0.8em;
+			color: var(--ink-muted);
+		}
+		.questions {
+			margin-top: 2.5em;
+			padding-top: 1.5em;
+			border-top: 1px solid var(--line);
+		}
+		.questions ul {
+			padding-left: 1.2em;
+		}
+		.questions li {
+			margin-bottom: 0.6em;
+		}
+		@media (max-width: 600px) {
+			.entry.shift {
+				margin-left: 0;
+			}
+		}
+	</style>
+</Page>

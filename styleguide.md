@@ -7,7 +7,10 @@ If something feels impressive but violates this guide, it does not belong.
 
 1. Purpose of the Site
 This site is a front door to my thinking.
-Its goal is to help thoughtful people feel:
+It is written for decision-makers who privately still feel like beginners —
+people whose titles outran their certainty, whose domain skills got them the
+seat but no longer cover what the seat demands.
+Its goal is to help that reader feel:
 hopeful about the future,
 curious rather than intimidated,
 safe asking questions they don’t yet know how to phrase.
@@ -47,13 +50,19 @@ emojis
 excessive exclamation points
 performative excitement
 Enthusiasm should feel contained, not loud.
+3.4 Surges
+High-intensity enthusiasm lives in a marked container: Surge posts, visually
+marked with the --surge color. Inside the container, intensity is welcome.
+Outside the container, the calm rules apply absolutely.
 
 4. Color System
 Color is used for expression, not decoration.
 4.1 Palette
-Calm, cool neutrals for backgrounds
-Dark charcoal for text
-One expressive accent color only
+Warm paper off-whites for backgrounds (see REDESIGN_BRIEF.md §5.1)
+Warm near-black ink for text
+One expressive accent color only: Falu red — Swedish barn paint,
+New England barn paint; the transatlantic thesis in a pigment
+A second, hotter tone (--surge) reserved exclusively for Surge posts
 The accent color signals attention but should never dominate.
 4.2 Accent Color Usage
 Accent color may be used for:
@@ -108,8 +117,10 @@ Orientation > recency.
 Content is organized by ideas, not outputs.
 Writing and video coexist
 No “Videos” tab
-No “Projects” tab
 Topics are the primary navigation.
+One quiet /work page is permitted as a cross-topic index of projects;
+projects also live inside topic thinking tables. Projects are evidence
+for the ideas, not a separate life.
 6.3 Topic Pages as Thinking Tables
 Topic pages should feel:
 non-linear
@@ -145,6 +156,14 @@ provisional language
 evolving posts
 revisions over time
 The site should feel alive, not finalized.
+7.4 Conviction
+Every essay contains at least one claim a reasonable, informed person would
+dispute. The permission-giving tone applies to the reader’s uncertainty,
+never to the ideas. We are welcoming about people and demanding about
+thinking. It is acceptable — desirable — that some readers leave.
+7.5 Danger Writing
+Pieces about real dangers must end with a credible path forward.
+Never doom without a door.
 
 9. Final Litmus Test
 Before adding anything to the site, ask:

@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import Page from '../layouts/Page.astro';
+
+// Projects live in the content collection with type: 'project'.
+// They appear both here and on their topic pages.
+const projects = (await getCollection('blog'))
+	.filter((post) => post.data.type === 'project')
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Page
+	title="Work"
+	description="Selected projects — ideas from this site, made real. Understatement is deliberate."
+>
+	<p class="intro">
+		Thinking in public is only half the job. These are selected things I've built, shipped, or
+		helped make happen. Each links back to the topic it belongs to — the projects are the
+		<em>evidence</em> for the ideas, not a separate life.
+	</p>
+
+	{
+		projects.length > 0 ? (
+			<div class="projects">
+				{projects.map((p) => (
+					<div class="project">
+						<h3>
+							<a href={`/writing/${p.id}/`}>{p.data.title}</a>
+						</h3>
+						<p>{p.data.description}</p>
+						<p class="links">
+							{p.data.projectUrl && <a href={p.data.projectUrl}>visit ↗</a>}
+							{p.data.topics.map((t) => (
+								<a href={`/topics/${t}`}>{t}</a>
+							))}
+						</p>
+					</div>
+				))}
+			</div>
+		) : (
+			<p class="epistemic">
+				This page is being stocked. Projects are being written up one at a time — each as an
+				honest account of what was built, what worked, and what didn't.
+			</p>
+		)
+	}
+
+	<style>
+		.intro {
+			max-width: 62ch;
+			color: var(--ink-muted);
+		}
+		.projects {
+			margin-top: 2em;
+		}
+		.project {
+			padding: 1.25em 0;
+			border-bottom: 1px solid var(--line);
+		}
+		.project h3 {
+			margin: 0 0 0.3em;
+		}
+		.project p {
+			margin: 0 0 0.4em;
+			max-width: 62ch;
+		}
+		.links a {
+			margin-right: 1em;
+			font-size: 0.85em;
+			font-style: italic;
+		}
+	</style>
+</Page>

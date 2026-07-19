@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Page from '../../layouts/Page.astro';
+
+// Deliberately unglamorous: a plain chronological index for returning readers.
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Page
+	title="Writing"
+	description="Everything, in order. For browsing by idea instead, start with Topics."
+>
+	<p class="intro">
+		Everything, newest first. If you'd rather browse by idea, start with
+		<a href="/topics">Topics</a> — that's how this site is meant to be read.
+	</p>
+
+	{
+		posts.length > 0 ? (
+			<ul class="index">
+				{posts.map((post) => (
+					<li class={post.data.type === 'surge' ? 'isSurge' : ''}>
+						<a href={`/writing/${post.id}/`}>{post.data.title}</a>
+						<span class="meta">
+							<span class="type">{post.data.type}</span> ·{' '}
+							<FormattedDate date={post.data.pubDate} />
+						</span>
+					</li>
+				))}
+			</ul>
+		) : (
+			<p class="epistemic">
+				Nothing published yet — the first pieces are on the table. Subscribe by{' '}
+				<a href="/rss.xml">RSS</a> to catch them.
+			</p>
+		)
+	}
+
+	<style>
+		.intro {
+			max-width: 62ch;
+			color: var(--ink-muted);
+		}
+		.index {
+			list-style: none;
+			margin: 1.5em 0 0;
+			padding: 0;
+		}
+		.index li {
+			padding: 0.6em 0;
+			border-bottom: 1px solid var(--line);
+		}
+		.index li a {
+			font-weight: 700;
+		}
+		.index li.isSurge .type {
+			color: var(--surge);
+		}
+		.meta {
+			display: block;
+			font-size: 0.8em;
+			color: var(--ink-muted);
+		}
+		.type {
+			font-style: italic;
+		}
+	</style>
+</Page>

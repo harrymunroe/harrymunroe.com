@@ -1,0 +1,69 @@
+---
+import Page from '../../layouts/Page.astro';
+import { topics } from '../../data/topics';
+---
+
+<Page
+	title="Topics"
+	description="The tables where I think in public — notes, essays, projects, poems, and open questions, organized by idea."
+>
+	<p class="intro">
+		Everything here is organized by idea, not by format. Each topic is a working table: essays sit
+		next to half-formed notes, projects next to poems, finished thoughts next to open questions.
+		<em>Unfinished is a feature.</em>
+	</p>
+
+	<div class="topicList">
+		{
+			topics.map((t) => (
+				<a class="topic" href={`/topics/${t.slug}`}>
+					<span class="topicLabel">{t.label}</span>
+					<span class="topicDesc">{t.desc}</span>
+				</a>
+			))
+		}
+	</div>
+
+	<style>
+		.intro {
+			max-width: 62ch;
+			color: var(--ink-muted);
+		}
+		.topicList {
+			margin-top: 1.5em;
+			display: flex;
+			flex-direction: column;
+		}
+		.topic {
+			display: flex;
+			gap: 1em;
+			align-items: baseline;
+			padding: 0.8em 0;
+			border-bottom: 1px solid var(--line);
+			color: var(--ink);
+		}
+		.topic:hover {
+			text-decoration: none;
+		}
+		.topic:hover .topicLabel {
+			color: var(--accent-deep);
+			text-decoration: underline;
+			text-underline-offset: 3px;
+		}
+		.topicLabel {
+			font-weight: 700;
+			color: var(--accent);
+			min-width: 6.5em;
+		}
+		.topicDesc {
+			color: var(--ink-muted);
+			font-size: 0.95em;
+		}
+		@media (max-width: 600px) {
+			.topic {
+				flex-direction: column;
+				gap: 0.15em;
+			}
+		}
+	</style>
+</Page>
