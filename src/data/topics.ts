@@ -11,21 +11,21 @@ export interface Topic {
 
 export const topics: Topic[] = [
 	{
-		slug: 'ai',
-		label: 'AI',
-		desc: 'Decision-making under uncertainty, and what institutions do when judgment gets cheap.',
-		openQuestions: [
-			'When a model can draft the analysis, what is the analyst for?',
-			'Which decisions should institutions refuse to automate, even when they could?',
-		],
-	},
-	{
 		slug: 'quantum',
 		label: 'Quantum',
 		desc: 'New ways of reasoning about computation, early enough that curiosity still beats credentials.',
 		openQuestions: [
 			'Where does quantum simulation change energy research first: battery chemistry or nuclear materials?',
 			'What should a non-physicist executive actually understand about quantum, and what can they safely ignore?',
+		],
+	},
+	{
+		slug: 'ai',
+		label: 'AI',
+		desc: 'Decision-making under uncertainty, and what institutions do when judgment gets cheap.',
+		openQuestions: [
+			'When a model can draft the analysis, what is the analyst for?',
+			'Which decisions should institutions refuse to automate, even when they could?',
 		],
 	},
 	{
@@ -40,10 +40,10 @@ export const topics: Topic[] = [
 	{
 		slug: 'healthcare',
 		label: 'Healthcare',
-		desc: 'Drugs discovered by simulation, medicine that starts in the gym and kitchen, and care systems for a world growing old.',
+		desc: 'Drugs discovered by simulation, prevention as infrastructure, and care systems for a world growing old.',
 		openQuestions: [
 			'Which pharmaceutical discoveries become possible once we can simulate molecules honestly?',
-			'What happens to healthcare when exercise and nutrition are prescribed as seriously as statins?',
+			'If hormone therapy can compress decades of age-related decline, what does deploying it at population scale look like, and who decides?',
 			'An aging world needs new models of health management. Who builds them, and who pays?',
 		],
 	},

@@ -176,3 +176,17 @@ Apply these edits to `styleguide.md` (keep everything else):
 14. QA: run link checker, Lighthouse (target 95+ across the board), test at 360px width, verify RSS validates.
 
 **Definition of done, per the litmus test:** every page answers one question; nothing on the site could be mistaken for a SaaS landing page; a stranger with a big title and a private doubt would bookmark it.
+
+---
+
+## 10. Distribution: the site and other platforms
+
+**Model: hub and spokes.** The site + email list is the only audience asset Harry owns; every platform is rented reach that feeds it. Never build the primary archive anywhere else.
+
+- **The site** is the canonical home of every piece. The email list (Buttondown) is the conversion goal of all other channels — a subscriber is worth more than any number of impressions.
+- **LinkedIn is the primary spoke.** Harry's exact readers (policy, energy, enterprise tech, government) live there professionally. Practice: rewrite each piece as a *native* LinkedIn post (LinkedIn suppresses external links) with the site link in a comment or at the end. The native version is the ad; the site version is the record.
+- **Established outlets over platform growth.** Per the strategic plan, bylines in policy outlets (War on the Rocks, domain publications, Swedish outlets later) build authority faster than any owned channel. Each byline's bio line points to the site. Outlets lend credibility; the site collects the readers they send.
+- **Substack: skip.** It duplicates Buttondown while owning the reader relationship, and its discovery network doesn't serve this niche. Revisit only if a genuine essay-subscription business becomes a goal.
+- **Medium: skip.** No durable audience accrues.
+- **Video/audio: guest, don't host.** Harry presents well, but running a YouTube channel is a production treadmill misaligned with a no-Executing-themes profile. Podcast guesting and recorded talks cost near zero and reach curated audiences; embed or link them on topic pages afterward.
+- **Rule of thumb:** anything published elsewhere gets a home on the site within a week, and every channel's bio links to one place: harrymunroe.com.
