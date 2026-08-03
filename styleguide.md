@@ -44,8 +44,9 @@ enthusiasm
 side thoughts
 gentle emphasis
 Sentence fragments are allowed
-Em dashes are permitted but rationed: at most one per paragraph,
-and never as the default way to attach a clause
+Avoid em dashes. Rewrite the sentence instead, or use a colon,
+a comma, or a full stop. Where one is genuinely the clearest
+option available, at most one per page.
 Avoid:
 emojis
 excessive exclamation points
@@ -158,10 +159,15 @@ evolving posts
 revisions over time
 The site should feel alive, not finalized.
 7.4 Conviction
-Every essay contains at least one claim a reasonable, informed person would
-dispute. The permission-giving tone applies to the reader’s uncertainty,
-never to the ideas. We are welcoming about people and demanding about
-thinking. It is acceptable — desirable — that some readers leave.
+The permission-giving tone applies to the reader’s uncertainty, never to the
+ideas. We are welcoming about people and demanding about thinking. It is
+acceptable, and desirable, that some readers leave.
+Essays should say what I actually think, including the parts a reasonable,
+informed person would dispute. The test isn’t whether a piece contains a
+disputable claim; it’s whether any claim got softened or cut because it might
+attract disagreement. If that happened, put it back.
+This applies to essays. Notes and explainers may simply be useful. Pages that
+orient the reader — home, about, topics — are not required to argue.
 7.5 Danger Writing
 Pieces about real dangers must end with a credible path forward.
 Never doom without a door.
@@ -170,7 +176,8 @@ Certain rhetorical patterns now read as AI-generated and undermine the
 site's realness. Minimize:
 the contrast pivot ("That's a claim, not a mood"; "X isn't about A, it's about B")
 em dashes used as a rhythm crutch
-triadic punch lines and mirrored sentence pairs
+mirrored sentence pairs
+(Triads are fine. Harry likes them and they read as his voice, not machine cadence.)
 Prefer plain declarative sentences. If a line sounds like it's performing
 its own cleverness, rewrite it flat. One earned flourish per page.
 

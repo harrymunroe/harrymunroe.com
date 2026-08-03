@@ -11,12 +11,12 @@ const projects = (await getCollection('blog'))
 
 <Page
 	title="Work"
-	description="Selected projects — ideas from this site, made real. Understatement is deliberate."
+	description="What I'm building, and what I'm trying to find out by building it."
 >
 	<p class="intro">
-		Thinking in public is only half the job. These are selected things I've built, shipped, or
-		helped make happen. Each links back to the topic it belongs to — the projects are the
-		<em>evidence</em> for the ideas, not a separate life.
+		Thinking in public is only half the job. These are the things I'm building, and what I'm
+		trying to find out by building them. Each one links back to the topic it came from. Nothing
+		here is finished.
 	</p>
 
 	{
@@ -39,8 +39,8 @@ const projects = (await getCollection('blog'))
 			</div>
 		) : (
 			<p class="epistemic">
-				This page is being stocked. Projects are being written up one at a time — each as an
-				honest account of what was built, what worked, and what didn't.
+				This page is being stocked. Projects are written up one at a time, each an honest
+				account of what was built, what worked, and what didn't.
 			</p>
 		)
 	}
@@ -56,6 +56,9 @@ const projects = (await getCollection('blog'))
 		.project {
 			padding: 1.25em 0;
 			border-bottom: 1px solid var(--line);
+		}
+		.project:last-child {
+			border-bottom: none;
 		}
 		.project h3 {
 			margin: 0 0 0.3em;

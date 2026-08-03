@@ -31,20 +31,20 @@ export const topics: Topic[] = [
 	{
 		slug: 'energy',
 		label: 'Energy',
-		desc: 'Grids, infrastructure, and long timelines. The physical layer of everything else.',
+		desc: 'Grids, infrastructure, and long timelines. Nothing else on this list happens without it.',
 		openQuestions: [
 			'Data centers get built in two years; grid interconnections take ten. What actually closes that gap?',
 			'What would it mean to design a grid for crisis instead of just for peacetime efficiency?',
 		],
 	},
 	{
-		slug: 'healthcare',
-		label: 'Healthcare',
-		desc: 'Drugs discovered by simulation, prevention as infrastructure, and care systems for a world growing old.',
+		slug: 'resilience',
+		label: 'Resilience',
+		desc: 'Factories, supply chains, and the institutions that have to hold under pressure. Most of what breaks in a crisis was decided years earlier.',
 		openQuestions: [
-			'Which pharmaceutical discoveries become possible once we can simulate molecules honestly?',
-			'If hormone therapy can compress decades of age-related decline, what does deploying it at population scale look like, and who decides?',
-			'An aging world needs new models of health management. Who builds them, and who pays?',
+			'Which parts of the industrial base can be rebuilt in 18 months, and which can’t be rebuilt in ten years?',
+			'What does Nordic total defense have to teach American infrastructure?',
+			'Defense ministries and health systems are solving the same adoption problem separately. What would they learn from each other?',
 		],
 	},
 	{

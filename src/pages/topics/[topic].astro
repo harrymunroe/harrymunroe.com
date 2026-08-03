@@ -50,21 +50,21 @@ const typeLabels: Record<string, string> = {
 	}
 
 	<section class="questions">
-		<h2>Questions on the table</h2>
+		<h2>Questions I'm sitting with</h2>
 		<ul>
 			{topic.openQuestions.map((q) => <li>{q}</li>)}
 		</ul>
 		<p class="epistemic">
-			These are live questions, not rhetorical ones. If you have a good answer — or a better
-			question — <a href={`mailto:harry@harrymunroe.com?subject=${topic.label}`}>write me</a>.
+			These are live questions. If you have a good answer, or a better question,
+			<a href={`mailto:harry@harrymunroe.com?subject=${topic.label}`}>write me</a>.
 		</p>
 	</section>
 
 	{
 		entries.length === 0 && (
 			<p class="epistemic">
-				This table is still being set. Notes and projects will accumulate here as they're written
-				— subscribe by <a href="/rss.xml">RSS</a> to see them arrive.
+				Nothing on this page yet. Notes and projects will collect here as they're written.
+				Subscribe by <a href="/rss.xml">RSS</a> to see them arrive.
 			</p>
 		)
 	}

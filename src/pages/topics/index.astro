@@ -5,12 +5,12 @@ import { topics } from '../../data/topics';
 
 <Page
 	title="Topics"
-	description="The tables where I think in public — notes, essays, projects, poems, and open questions, organized by idea."
+	description="Notes, essays, projects, and open questions, organized by idea."
 >
 	<p class="intro">
-		Everything here is organized by idea. Each topic is a working table where essays sit next to
-		half-formed notes, projects next to poems, finished thoughts next to open questions.
-		<em>Unfinished is a feature.</em>
+		Everything here is organized by idea rather than by date. Each topic collects essays,
+		half-formed notes, projects, and the questions I haven't answered yet. Most of it is still in
+		progress, which is the point.
 	</p>
 
 	<div class="topicList">
@@ -41,6 +41,9 @@ import { topics } from '../../data/topics';
 			padding: 0.8em 0;
 			border-bottom: 1px solid var(--line);
 			color: var(--ink);
+		}
+		.topic:last-child {
+			border-bottom: none;
 		}
 		.topic:hover {
 			text-decoration: none;

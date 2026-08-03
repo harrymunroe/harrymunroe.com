@@ -27,7 +27,7 @@ const statusLabels: Record<string, string> = {
 		<Header />
 		<main>
 			<article class:list={[{ surge: isSurge }]}>
-				{isSurge && <p class="surgeMark">a surge — written hot, on purpose</p>}
+				{isSurge && <p class="surgeMark">a surge: written hot, on purpose</p>}
 				<h1>{title}</h1>
 				<p class="dateline">
 					<FormattedDate date={pubDate} />
@@ -35,7 +35,7 @@ const statusLabels: Record<string, string> = {
 						updatedDate && (
 							<span>
 								{' '}
-								· tended <FormattedDate date={updatedDate} />
+								· last updated <FormattedDate date={updatedDate} />
 							</span>
 						)
 					}
@@ -61,7 +61,7 @@ const statusLabels: Record<string, string> = {
 					}
 					<p>
 						Disagree, or see something I'm missing? The best part of this site happens over
-						email — <a href={`mailto:harry@harrymunroe.com?subject=Re: ${title}`}>write me back</a>.
+						email, so <a href={`mailto:harry@harrymunroe.com?subject=Re: ${title}`}>write me back</a>.
 					</p>
 				</footer>
 			</article>
