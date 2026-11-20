@@ -22,6 +22,8 @@ const blog = defineCollection({
 			status: z.enum(['forming', 'confident', 'revised']).optional(),
 			// For type: project — external links
 			projectUrl: z.string().url().optional(),
+			// Drafts build nowhere on the public site.
+			draft: z.boolean().default(false),
 		}),
 });
 

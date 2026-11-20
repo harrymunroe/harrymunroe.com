@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { getPublished } from '../../lib/content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Page from '../../layouts/Page.astro';
 
 // Deliberately unglamorous: a plain chronological index for returning readers.
-const posts = (await getCollection('blog')).sort(
+const posts = (await getPublished()).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---

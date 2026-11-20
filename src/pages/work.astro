@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { getPublished } from '../lib/content';
 import Page from '../layouts/Page.astro';
 
 // Projects live in the content collection with type: 'project'.
 // They appear both here and on their topic pages.
-const projects = (await getCollection('blog'))
+const projects = (await getPublished())
 	.filter((post) => post.data.type === 'project')
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---

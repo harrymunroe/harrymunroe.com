@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getPublished } from '../../lib/content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Page from '../../layouts/Page.astro';
 import { topics } from '../../data/topics';
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 
 const { topic } = Astro.props;
 
-const entries = (await getCollection('blog'))
+const entries = (await getPublished())
 	.filter((post) => post.data.topics.includes(topic.slug))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
