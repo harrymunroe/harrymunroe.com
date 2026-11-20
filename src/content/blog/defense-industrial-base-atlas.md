@@ -3,7 +3,7 @@ title: 'Defense Industrial Base Atlas'
 description: 'A map of who makes what, where, and how fast, assembled from public data.'
 pubDate: 2026-08-02
 type: project
-topics: ['resilience']
+topics: ['production']
 status: forming
 ---
 

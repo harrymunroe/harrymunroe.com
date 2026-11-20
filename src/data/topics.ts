@@ -1,5 +1,5 @@
 // Topic definitions. Slugs match the `topics` array in content frontmatter.
-// Open questions are real questions Harry is sitting with — they render on
+// Open questions are real questions Harry is sitting with. They render on
 // topic pages so a table is never empty. DRAFTS: Harry should revise.
 
 export interface Topic {
@@ -11,48 +11,56 @@ export interface Topic {
 
 export const topics: Topic[] = [
 	{
-		slug: 'quantum',
-		label: 'Quantum',
-		desc: 'New ways of reasoning about computation, early enough that curiosity still beats credentials.',
+		slug: 'adoption',
+		label: 'Adoption',
+		desc: 'Why useful technology sits unused, and what it takes for an institution to put it to work.',
 		openQuestions: [
-			'Where does quantum simulation change energy research first: battery chemistry or nuclear materials?',
-			'What should a non-physicist executive actually understand about quantum, and what can they safely ignore?',
-		],
-	},
-	{
-		slug: 'ai',
-		label: 'AI',
-		desc: 'Decision-making under uncertainty, and what institutions do when judgment gets cheap.',
-		openQuestions: [
+			'Why do promising AI pilots so rarely become something an organization runs every day?',
+			'Which matters more for adoption: the acquisition rules, or who inside the institution owns the result?',
 			'When a model can draft the analysis, what is the analyst for?',
-			'Which decisions should institutions refuse to automate, even when they could?',
-		],
-	},
-	{
-		slug: 'energy',
-		label: 'Energy',
-		desc: 'Grids, infrastructure, and long timelines. Nothing else on this list happens without it.',
-		openQuestions: [
-			'Data centers get built in two years; grid interconnections take ten. What actually closes that gap?',
-			'What would it mean to design a grid for crisis instead of just for peacetime efficiency?',
-		],
-	},
-	{
-		slug: 'resilience',
-		label: 'Resilience',
-		desc: 'Factories, supply chains, and the institutions that have to hold under pressure. Most of what breaks in a crisis was decided years earlier.',
-		openQuestions: [
-			'Which parts of the industrial base can be rebuilt in 18 months, and which can’t be rebuilt in ten years?',
-			'What does Nordic total defense have to teach American infrastructure?',
 			'Defense ministries and health systems are solving the same adoption problem separately. What would they learn from each other?',
 		],
 	},
 	{
-		slug: 'data',
-		label: 'Data',
-		desc: 'Measurement, context, and trust. Why numbers persuade, and when they shouldn’t.',
+		slug: 'production',
+		label: 'Production',
+		desc: 'Factories, supply chains, and the capacity to build at scale, including what can and cannot be rebuilt quickly in a crisis.',
 		openQuestions: [
-			'Why do organizations that collect everything still decide by anecdote?',
+			'Which parts of the industrial base can be rebuilt in 18 months, and which can’t be rebuilt in ten years?',
+			'How much demand has to be promised before a supplier will build a new production line?',
+			'Which industries should a government treat as strategic, and by what test?',
+		],
+	},
+	{
+		slug: 'capital',
+		label: 'Capital',
+		desc: 'Who pays for industrial capacity, who owns it, and how long they are willing to wait for a return.',
+		openQuestions: [
+			'What does an owner with a fifty-year horizon decide differently from a fund with a five-year one?',
+			'How should governments and private investors split the risk of building capacity before the orders exist?',
+			'Why does private money reach software so much more easily than factories, and what would change that?',
+		],
+	},
+	{
+		slug: 'allies',
+		label: 'Allies & the Nordics',
+		desc: 'How allies build things together, and what Sweden, Finland, and their neighbors do differently about industry, ownership, and defense.',
+		openQuestions: [
+			'When should allies run a joint program, and when should one company lead and the rest supply it?',
+			'What does it take for two countries’ defense industries to share designs, data, and production lines?',
+			'What does Nordic total defense have to teach American infrastructure?',
+			'How have Swedish industrial companies stayed competitive for generations under the same long-term owners?',
+		],
+	},
+	{
+		slug: 'compute',
+		label: 'Compute & energy',
+		desc: 'AI, chips, quantum computing, and the power grids they depend on.',
+		openQuestions: [
+			'Data centers get built in two years; grid interconnections take ten. What actually closes that gap?',
+			'What would it mean to design a grid for crisis instead of just for peacetime efficiency?',
+			'A quantum computer depends on a short list of suppliers in a few allied countries. What does that supply chain need before the machines scale?',
+			'What should a non-physicist executive actually understand about quantum, and what can they safely ignore?',
 		],
 	},
 ];

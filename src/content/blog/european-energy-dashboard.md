@@ -3,7 +3,7 @@ title: 'European Energy Dashboard'
 description: "Where Europe's grid is constrained, and where new generation would do the most good."
 pubDate: 2026-08-02
 type: project
-topics: ['energy', 'resilience']
+topics: ['compute', 'allies']
 status: forming
 ---
 

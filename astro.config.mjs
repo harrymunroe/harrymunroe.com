@@ -8,4 +8,11 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
 	site: 'https://harrymunroe.com',
 	integrations: [mdx(), sitemap()],
+	redirects: {
+		'/topics/resilience': '/topics/production',
+		'/topics/ai': '/topics/adoption',
+		'/topics/energy': '/topics/compute',
+		'/topics/quantum': '/topics/compute',
+		'/topics/data': '/topics',
+	},
 });
