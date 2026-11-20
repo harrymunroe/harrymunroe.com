@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# private planning files: never commit
+*_BRIEF.md
+*_BACKLOG.md
+*_PLAN.md
+REFORM_PLAN*.md
+drafts/

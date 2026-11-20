@@ -60,7 +60,7 @@ Outside the container, the calm rules apply absolutely.
 4. Color System
 Color is used for expression, not decoration.
 4.1 Palette
-Warm paper off-whites for backgrounds (see REDESIGN_BRIEF.md §5.1)
+Warm paper off-whites for backgrounds (tokens are defined in src/styles/global.css)
 Warm near-black ink for text
 One expressive accent color only: Falu red — Swedish barn paint,
 New England barn paint; the transatlantic thesis in a pigment
