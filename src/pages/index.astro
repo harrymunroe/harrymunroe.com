@@ -16,19 +16,21 @@ import { topics } from '../data/topics';
 		<main>
 			<section class="hero">
 				<h1>Hi, I'm Harry Munroe.</h1>
-				<p class="lead">
-					I'm learning to design systems that are built to collaborate, and I need your help.
+				<p class="lead">I work on turning technology into capability.</p>
+				<p class="subhead">
+					Inventing a technology is the first step. It also has to be built at scale, put to use,
+					and paid for. I study how the United States and its allies do that, with a focus on the
+					Nordic countries. I work at IBM, and this year I'm a fellow at the National Defense
+					University's Eisenhower School.
 				</p>
 				<p class="subhead">
-					I write about quantum computing, AI, energy, supply chains, and the institutions that
-					hold societies together. A lot of writing about the future focuses on what could go
-					wrong. I'd rather focus on what we can build, and find people who want to build it
-					with me.
+					If you work on any of this, I'd like to hear from you:
+					<a href="mailto:harry@harrymunroe.com">harry@harrymunroe.com</a>.
 				</p>
 			</section>
 
 			<section class="doors">
-				<h2>The topics I keep returning to</h2>
+				<h2>What I work on</h2>
 				<div class="topicList">
 					{
 						topics.map((t) => (
@@ -38,6 +40,24 @@ import { topics } from '../data/topics';
 							</a>
 						))
 					}
+				</div>
+			</section>
+
+			<section class="doors">
+				<h2>Start here</h2>
+				<div class="topicList">
+					<a class="topic" href="/research">
+						<span class="topicLabel">Research</span>
+						<span class="topicDesc">Papers, talks, and work in progress.</span>
+					</a>
+					<a class="topic" href="/work">
+						<span class="topicLabel">Work</span>
+						<span class="topicDesc">Tools I'm building on public data.</span>
+					</a>
+					<a class="topic" href="/about">
+						<span class="topicLabel">About</span>
+						<span class="topicDesc">Who I am and how to reach me.</span>
+					</a>
 				</div>
 			</section>
 
