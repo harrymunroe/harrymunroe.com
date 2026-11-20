@@ -7,9 +7,11 @@ If something feels impressive but violates this guide, it does not belong.
 
 1. Purpose of the Site
 This site is a front door to my thinking.
-It is written for decision-makers who privately still feel like beginners —
-people whose titles outran their certainty, whose domain skills got them the
-seat but no longer cover what the seat demands.
+It has two readers. Orientation pages (Home, About, Research, Work, Now) are
+for someone who has just met me or read something of mine and wants to know who
+I am and what I have done. The writing (essays, notes, explainers) is for
+decision-makers who privately still feel like beginners: people whose titles
+outran their certainty.
 Its goal is to help that reader feel:
 hopeful about the future,
 curious rather than intimidated,
@@ -114,12 +116,15 @@ Avoid:
 timestamps
 content counts
 update signals
+A short static list of links to other pages is allowed. It must carry no dates
+and must not update itself.
 Orientation > recency.
 6.2 Topics Over Formats
 Content is organized by ideas, not outputs.
 Writing and video coexist
 No “Videos” tab
 Topics are the primary navigation.
+The header carries four links: Topics, Research, Work, About.
 One quiet /work page is permitted as a cross-topic index of projects;
 projects also live inside topic thinking tables. Projects are evidence
 for the ideas, not a separate life.
@@ -180,6 +185,16 @@ mirrored sentence pairs
 (Triads are fine. Harry likes them and they read as his voice, not machine cadence.)
 Prefer plain declarative sentences. If a line sounds like it's performing
 its own cleverness, rewrite it flat. One earned flourish per page.
+7.7 Orientation Pages
+Home, About, Research, Work, and Now state facts plainly. They say what I work
+on, where, and what I have produced. The permission-giving tone in §7.1 belongs
+to the writing, not to these pages. On these pages, avoid apology,
+self-deprecation, and requests for help. Invite correspondence directly.
+7.8 Credit
+When a piece builds on someone else's argument, name them in the text and link
+to the source. Do not use another writer's coined phrases as section titles,
+headlines, or my own terms. Cite published documents, never classroom
+discussion.
 
 9. Final Litmus Test
 Before adding anything to the site, ask:
