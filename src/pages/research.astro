@@ -1,0 +1,78 @@
+---
+import Page from '../layouts/Page.astro';
+import { research, type ResearchItem } from '../data/research';
+
+const shown = research.filter((r) => r.confirmed && (r.date || r.inProgress));
+const groups: { heading: string; items: ResearchItem[] }[] = [
+	{ heading: 'In progress', items: shown.filter((r) => r.inProgress) },
+	{
+		heading: 'Papers and reports',
+		items: shown.filter((r) => !r.inProgress && (r.kind === 'paper' || r.kind === 'report')),
+	},
+	{
+		heading: 'Talks and teaching',
+		items: shown.filter((r) => !r.inProgress && (r.kind === 'talk' || r.kind === 'teaching')),
+	},
+].filter((g) => g.items.length > 0);
+---
+
+<Page title="Research" description="Papers, talks, and work in progress.">
+	<p class="intro">
+		Papers, reports, and talks, with the work in progress listed first. If you want a copy of
+		something that isn't linked, email me.
+	</p>
+
+	{
+		groups.length > 0 ? (
+			groups.map((g) => (
+				<section>
+					<h2>{g.heading}</h2>
+					<ul class="index">
+						{g.items.map((r) => (
+							<li>
+								{r.url ? <a href={r.url}>{r.title}</a> : <strong>{r.title}</strong>}
+								<span class="meta">
+									{r.venue}
+									{r.date && <>, {r.date}</>}
+								</span>
+								{r.note && <span class="note">{r.note}</span>}
+							</li>
+						))}
+					</ul>
+				</section>
+			))
+		) : (
+			<p class="epistemic">This page is being stocked.</p>
+		)
+	}
+
+	<style>
+		.intro {
+			max-width: 62ch;
+			color: var(--ink-muted);
+		}
+		.index {
+			list-style: none;
+			margin: 1em 0 0;
+			padding: 0;
+		}
+		.index li {
+			padding: 0.6em 0;
+			border-bottom: 1px solid var(--line);
+		}
+		.index li a,
+		.index li strong {
+			font-weight: 700;
+		}
+		.meta {
+			display: block;
+			font-size: 0.8em;
+			color: var(--ink-muted);
+		}
+		.note {
+			display: block;
+			font-size: 0.9em;
+			max-width: 62ch;
+		}
+	</style>
+</Page>
